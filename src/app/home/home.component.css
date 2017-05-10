@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container .row {
+    margin: 0 auto;
+}
+
+#home-card {
+    padding: 10px 0 0 0;
+}
+
+.card-image .card-title {
+    font-size: 1.3em;
+    font-weight: 900;
+    padding: 0 0 0 18%;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.card-content a {
+    margin: 0 0 0 25%;
+}
