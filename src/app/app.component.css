@@ -1,8 +1,23 @@
 .nav-wrapper img {
     height: 8vh;
-    widows: auto;
+    width: auto;
+    padding: 8% 0 0 5%;
 }
 
 .nav-wrapper {
     background-color: #8D8E93;
 }
+
+
+/*.nav-wrapper a {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 0px solid transparent;
+    width: 210px;
+    transition: 0.5s ease;
+    height: 25px;
+}
+
+.nav-wrapper a:hover {
+    border-bottom: 3px solid blue;
+}*/
