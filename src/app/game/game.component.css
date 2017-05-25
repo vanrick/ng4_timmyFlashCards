@@ -24,3 +24,48 @@
 .card-image {
     border-radius: 15px 15px 0 0;
 }
+
+.problem {
+    position: relative;
+    min-height: 300px;
+}
+
+.first,
+.second,
+.value {
+    font-size: 5.8em;
+    left: -40px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+}
+
+.operator {
+    left: 10px;
+    top: 143px;
+    font-size: 4.5em;
+    position: absolute;
+}
+
+.second {
+    top: 130px;
+}
+
+.value {
+    top: 140px;
+}
+
+.line {
+    border-bottom: 1px solid #ccc;
+    width: calc(100% - 30px);
+    position: absolute;
+    top: 250px;
+}
+
+.tim_pic {
+    height: 282px;
+    width: 250px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */
+}

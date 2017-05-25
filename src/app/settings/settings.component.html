@@ -2,88 +2,56 @@
     <h1>Settings</h1>
     <div class="col s12 m5">
         <div class="card-panel white">
-            <form>
-                <h5>Difficulty:</h5>
-                <p>
-                    <input type="checkbox" class="filled-in" id="easy_box" checked="checked" />
-                    <label for="easy_box">easy</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="medium_box" />
-                    <label for="medium_box">medium</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="hard_box" />
-                    <label for="hard_box">hard</label>
-                </p>
-
-                <!--<input name="grp1" class="filled-in" type="checkbox" id="r1">
-                <label for="r1">Radio 1</label>
-
-                <input name="grp1" class="filled-in" type="checkbox" id="r2">
-                <label for="r2">Radio 2</label>
-
-                <input name="grp1" class="filled-in" type="checkbox" id="r3">
-                <label for="r3">Radio 3</label>
-
-                <input name="grp1" class="filled-in" type="checkbox" id="r4">
-                <label for="r4">Radio 4</label>-->
-
+            <form [formGroup]="settingsForm">
+                <label for="difficulty"><h5>Difficulty:</h5></label>
+                <div id='difficulty' class="input-field">
+                    <p>
+                        <input type="radio" class="with-gap" id="easy_box" value="0" checked="checked" formControlName="difficulty" />
+                        <label for="easy_box">easy</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="medium_box" value="1" formControlName="difficulty" />
+                        <label for="medium_box">medium</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="hard_box" value="2" formControlName="difficulty" />
+                        <label for="hard_box">hard</label>
+                    </p>
+                </div>
             </form>
         </div>
     </div>
 
     <div class="col s12 m5">
         <div class="card-panel white">
-            <form action="">
-                <h5>Math Type:</h5>
-                <p>
-                    <input type="checkbox" class="filled-in" id="all_box" checked="checked" />
-                    <label for="all_box">all</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="addition_box" />
-                    <label for="addition_box">addition</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="subtraction_box" />
-                    <label for="subtraction_box">subtraction</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="multiplication_box" />
-                    <label for="multiplication_box">multiplication</label>
-                </p>
-                <p>
-                    <input type="checkbox" class="filled-in" id="division_box" />
-                    <label for="division_box">division</label>
-                </p>
+            <form [formGroup]="settingsForm">
+                <label for="math-type"><h5>Math Type:</h5></label>
+                <div id="math-type" class="input-field">
+                    <p>
+                        <input type="radio" class="with-gap" id="all_box" value="0" checked="checked" formControlName="mathType" />
+                        <label for="all_box">all</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="addition_box" value="1" formControlName="mathType" />
+                        <label for="addition_box">addition</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="subtraction_box" value="2" formControlName="mathType" />
+                        <label for="subtraction_box">subtraction</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="multiplication_box" value="3" formControlName="mathType" />
+                        <label for="multiplication_box">multiplication</label>
+                    </p>
+                    <p>
+                        <input type="radio" class="with-gap" id="division_box" value="4" formControlName="mathType" />
+                        <label for="division_box">division</label>
+                    </p>
+                </div>
             </form>
         </div>
     </div>
-
+    <div class="col s3 m5">
+        <a class="waves-effect waves-light btn-large" href="/game"><i class="material-icons left">play_circle_filled</i>Let's Play!</a>
+    </div>
 </div>
-<div id="radiocb" onclick="cbclick(event)">
-    <input type="checkbox" id="cb1" checked="checked" /> c1<br />
-    <input type="checkbox" id="cb2" /> c2<br />
-    <input type="checkbox" id="cb3" /> c3<br />
-    <input type="checkbox" id="cb4" /> c4<br />
-</div>
-<script>
-    function cbclick(e) {
-        e = e || event;
-        var cb = e.srcElement || e.target;
-        if (cb.type !== 'checkbox') {
-            return true;
-        }
-        var cbxs = document.getElementById('radiocb').getElementsByTagName('input'),
-            i = cbxs.length;
-        while (i--) {
-            if (cbxs[i].type && cbxs[i].type == 'checkbox' && cbxs[i].id !== cb.id) {
-                cbxs[i].checked = false;
-            }
-        }
-        // if the click should always result in a checked checkbox 
-        // unconmment this:
-        // cb.checked = true;
-    }
-</script>
