@@ -16,11 +16,13 @@
                     <span class="card-title activator grey-text text-darken-4">Click To Reveal<i class="material-icons right">done</i></span>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Answer<i class="material-icons right" (click)="getNextProblem()">close</i></span>
-                    <img *ngIf="showValue" class="activator tim_pic" src="../assets/images/tim4.jpg">
+                    <span (click)="getNextProblem()" class="card-title grey-text text-darken-4">Answer<i class="material-icons right">close</i></span>
+                    <img class="activator tim_pic" src="../assets/images/tim4.jpg">
                     <div class="value">{{mathProblem?.value | number}}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!--*ngIf="showValue"-->

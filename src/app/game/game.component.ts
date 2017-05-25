@@ -34,7 +34,7 @@ export class GameComponent implements OnInit {
 
   getNextProblem() {
     if (this.showValue) {
-      this.showValue = false;
+      // this.showValue = false;
 
       switch (this.settings.mathType) {
         case MathType.addition:
