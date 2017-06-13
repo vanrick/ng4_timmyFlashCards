@@ -53,8 +53,9 @@ export class GameComponent implements OnInit {
           this.mathProblem = this.mathService.getRandomProblem(this.settings.difficulty);
           break;
       }
-    } else {
-      this.showValue = true;
-    }
+    } 
+    // else {
+    //   this.showValue = true;
+    // }
   }
 }
